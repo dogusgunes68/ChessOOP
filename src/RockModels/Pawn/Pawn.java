@@ -5,8 +5,9 @@ import TableModels.Block;
 import TableModels.Table;
 
 public class Pawn extends Rock {
-    public Pawn(String type, boolean white) {
-        super(type, white);
+
+    public Pawn(String type, boolean white, int x, int y) {
+        super(type, white, x, y);
     }
 
     @Override

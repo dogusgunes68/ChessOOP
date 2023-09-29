@@ -1,7 +1,5 @@
 package TableModels;
 
-import ICastling;
-
 public class Table{
 
     // SINGLETON CLASS

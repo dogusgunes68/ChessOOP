@@ -6,10 +6,13 @@ import TableModels.Table;
 public abstract class Rock {
     String type;
     boolean white;
+    Position position;
+    boolean isKilled = false;
 
-    public Rock(String type, boolean white){
+    public Rock(String type, boolean white, int x, int y){
         this.type = type;
         this.white = white;
+        position = new Position(x,y);
     }
 
     protected abstract void move(Table table, Block startBlock, Block endBlock);
@@ -37,9 +40,12 @@ public abstract class Rock {
     public void setKilled(boolean killed) {
         isKilled = killed;
     }
-
-    boolean isKilled = false;
-
+    public Position getPosition() {
+        return position;
+    }
+    public void setPosition(Position position){
+        this.position = position;
+    }
 
 
 }
