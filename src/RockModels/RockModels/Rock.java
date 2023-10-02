@@ -1,21 +1,32 @@
-package RockModels;
+package RockModels.RockModels;
 
-import TableModels.Block;
-import TableModels.Table;
+import RockModels.MoveStrategy.MoveStrategy;
+import RockModels.Position;
 
 public abstract class Rock {
-    String type;
-    boolean white;
-    Position position;
-    boolean isKilled = false;
+    private String type;
+    private boolean white;
+    private Position position;
+    private boolean isKilled = false;
 
-    public Rock(String type, boolean white, int x, int y){
+    private MoveStrategy moveStrategy;
+
+    public Rock(String type, boolean white, int x, int y, MoveStrategy moveStrategy){
         this.type = type;
         this.white = white;
         position = new Position(x,y);
+        this.moveStrategy = moveStrategy;
     }
 
-    protected abstract void move(Table table, Block startBlock, Block endBlock);
+    // MOVE
+    public void move(){
+        moveStrategy.moveObject();
+    }
+
+    public void remove(){
+        // symbolic remove
+        this.position = null;
+    }
 
     public String getType() {
         return type;

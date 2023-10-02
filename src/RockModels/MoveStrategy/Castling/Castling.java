@@ -1,7 +1,7 @@
-package RockModels.Castling;
+package RockModels.MoveStrategy.Castling;
 
 import RockModels.Position;
-import RockModels.Rock;
+import RockModels.RockModels.Rock;
 
 public class Castling implements ICastling {
     @Override

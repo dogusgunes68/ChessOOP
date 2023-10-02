@@ -1,7 +1,7 @@
-package RockModels.Pawn;
+package RockModels.PawnToQueen;
 
 
-import RockModels.Rock;
+import RockModels.RockModels.Rock;
 
 public interface IPawnToQueen {
     void pawnToQueen(Rock pawn);

@@ -1,6 +1,6 @@
-package TableModels;
+package RockModels.TableModels;
 
-import RockModels.Rock;
+import RockModels.RockModels.Rock;
 
 public class Block {
     private int x;

@@ -1,4 +1,4 @@
-package TableModels;
+package RockModels.TableModels;
 
 public class Table{
 
@@ -7,7 +7,7 @@ public class Table{
 
     private Block[][] blocks;
 
-    private Table(Block[][] blocks) {
+    public Table(Block[][] blocks) {
         this.blocks = blocks;
     }
 
@@ -16,6 +16,11 @@ public class Table{
             instance = new Table(blocks);
         }
         return instance;
+    }
+
+    public boolean canCastling(){
+        // castling control
+        return true;
     }
 
     public Block getBlock(int x, int y){
